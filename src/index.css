@@ -3,21 +3,20 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* 🌸 balanço elegante e suave */
   @keyframes gentle-sway {
     0%, 100% {
-      transform: translateY(0) rotate(0deg);
+      transform: translateY(0px);
     }
-    25% {
-      transform: translateY(-6px) rotate(0.8deg);
+    40% {
+      transform: translateY(-6px);
     }
-    50% {
-      transform: translateY(4px) rotate(-0.6deg);
-    }
-    75% {
-      transform: translateY(-4px) rotate(0.5deg);
+    60% {
+      transform: translateY(-6px);
     }
   }
 
+  /* fade suave ao aparecer */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -27,10 +26,11 @@
     }
   }
 
+  /* escala suave ao aparecer */
   @keyframes scale-in {
     from {
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.95);
     }
     to {
       opacity: 1;
@@ -38,16 +38,17 @@
     }
   }
 
+  /* classes utilitárias */
   .animate-gentle-sway {
-    animation: gentle-sway 5s ease-in-out infinite;
+    animation: gentle-sway 4s ease-in-out infinite;
   }
 
   .animate-fade-in {
-    animation: fade-in 0.3s ease-out;
+    animation: fade-in 0.4s ease-out;
   }
 
   .animate-scale-in {
-    animation: scale-in 0.3s ease-out;
+    animation: scale-in 0.4s ease-out;
   }
 }
 
