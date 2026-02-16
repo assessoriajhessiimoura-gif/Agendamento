@@ -15,7 +15,8 @@ export default function Hero() {
           filter: 'brightness(1.1)'
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5EFE6]/50" />
+      {/* ✅ degradê ajustado */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="bg-[#3A2E2A]/20 backdrop-blur-md rounded-2xl p-8 max-w-3xl mx-auto shadow-xl border border-[#C6A75E]/30">
