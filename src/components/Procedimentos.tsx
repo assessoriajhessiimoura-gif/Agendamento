@@ -15,7 +15,7 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Técnica que proporciona volume natural e elegante, perfeito para o dia a dia.',
-    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.05.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.06.jpeg'
   },
   {
     nome: 'Volume Fox',
@@ -43,7 +43,7 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Aplicação rápida e prática, ideal para quem busca resultados imediatos.',
-    imagem: '/WhatsApp_Image_2026-02-16_at_14.40.49_(1).jpeg'
+    imagem: '//WhatsApp_Image_2026-02-16_at_12.53.19.jpeg'
   },
   {
     nome: 'Mega Volume',
