@@ -9,7 +9,7 @@ interface Procedimento {
   imagem: string;
 }
 
-const procedimentos: Procedimento[] = [
+const Nossos procedimentos: Procedimento[] = [
   {
     nome: 'Volume Brasileiro',
     preco: 165,
