@@ -15,42 +15,42 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Técnica que proporciona volume natural e elegante, perfeito para o dia a dia.',
-    imagem: '/volume-brasileiro.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.05.jpeg'
   },
   {
     nome: 'Volume Fox',
     preco: 165,
     precoManutencao: 110,
     descricao: 'Técnica sofisticada que cria um efeito de leque dramático e volumoso.',
-    imagem: '/volume-fox.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.07_(1).jpeg'
   },
   {
     nome: 'Volume Europeu',
     preco: 165,
     precoManutencao: 110,
     descricao: 'Efeito alongado e felino, perfeito para um olhar marcante e sedutor.',
-    imagem: '/volume-europeu.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.07_(2).jpeg'
   },
   {
     nome: 'Volume Fox Marrom',
     preco: 165,
     precoManutencao: 110,
     descricao: 'Variação do Fox com fios marrons para um efeito mais suave e natural.',
-    imagem: '/volume-fox-marrom.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.06.jpeg'
   },
   {
     nome: 'Volume Express',
     preco: 165,
     precoManutencao: 110,
     descricao: 'Aplicação rápida e prática, ideal para quem busca resultados imediatos.',
-    imagem: '/volume-express.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_14.40.49_(1).jpeg'
   },
   {
     nome: 'Mega Volume',
     preco: 180,
     precoManutencao: 120,
     descricao: 'Máximo volume e densidade, perfeito para eventos especiais e looks glamourosos.',
-    imagem: '/mega-volume.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.07.jpeg'
   }
 ];
 
@@ -79,13 +79,16 @@ export default function Procedimentos() {
             {procedimentos.map((proc, index) => (
               <div
                 key={`${proc.nome}-${index}`}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#C6A75E]"
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] hover:scale-105 transition-all duration-300"
               >
                 <div className="h-64 overflow-hidden">
                   <img
                     src={proc.imagem}
                     alt={proc.nome}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/placeholder.jpg';
+                    }}
                   />
                 </div>
 
