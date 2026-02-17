@@ -66,23 +66,19 @@ export default function Depoimentos() {
 
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-[#C6A75E] transition-all duration-500 animate-gentle-sway">
             
-            {/* NOME */}
             <p className="text-[#3A2E2A] font-semibold text-center text-xl">
               {depoimentos[currentIndex].nome}
             </p>
 
-            {/* ESTRELAS */}
             <div className="flex gap-1 justify-center mt-2 mb-6">
               {[...Array(depoimentos[currentIndex].estrelas)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-[#C6A75E] text-[#C6A75E]" />
               ))}
             </div>
 
-            {/* COMENTÁRIO */}
             <p className="text-[#3A2E2A] text-lg md:text-xl text-center italic leading-relaxed">
               {depoimentos[currentIndex].texto}
             </p>
-
           </div>
 
           <button
@@ -99,4 +95,14 @@ export default function Depoimentos() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index ===
+                  index === currentIndex ? 'bg-[#C6A75E] w-8' : 'bg-[#C6A75E]/30'
+                }`}
+              />
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
