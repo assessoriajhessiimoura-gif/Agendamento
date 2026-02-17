@@ -20,7 +20,7 @@ export default function Curso() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-3">
                   <Award className="w-6 h-6 text-[#C6A75E]" />
-                  <span className="text-[#3A2E2A]">Certificado reconhecido</span>
+                  <span className="text-[#3A2E2A]">Certificado Reconhecido</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Star className="w-6 h-6 text-[#C6A75E]" />
@@ -56,7 +56,7 @@ export default function Curso() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C6A75E] text-xl">✓</span>
-                  <span className="text-[#3A2E2A]">Materiais inclusos</span>
+                  <span className="text-[#3A2E2A]">Lista de materiais(materiais a parte)</span>
                 </li>
               </ul>
             </div>
