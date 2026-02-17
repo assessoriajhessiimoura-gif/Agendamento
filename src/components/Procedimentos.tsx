@@ -1,14 +1,3 @@
-import { useState } from 'react';
-import Modal from './Modal';
-
-interface Procedimento {
-  nome: string;
-  preco: number;
-  precoManutencao: number;
-  descricao: string;
-  imagem: string;
-}
-
 const procedimentos: Procedimento[] = [
   {
     nome: 'Volume Brasileiro',
@@ -22,7 +11,7 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Técnica sofisticada que cria um efeito de leque dramático e volumoso.',
-    imagem: 'WhatsApp_Image_2026-02-16_at_12.14.06_(1).jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.06_(1).jpeg'
   },
   {
     nome: 'Volume Europeu',
@@ -43,7 +32,7 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Aplicação rápida e prática, ideal para quem busca resultados imediatos.',
-    imagem: '//WhatsApp_Image_2026-02-16_at_12.53.19.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.53.19.jpeg'
   },
   {
     nome: 'Mega Volume',
@@ -53,76 +42,3 @@ const procedimentos: Procedimento[] = [
     imagem: '/WhatsApp_Image_2026-02-16_at_12.14.07.jpeg'
   }
 ];
-
-export default function Procedimentos() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProcedimento, setSelectedProcedimento] = useState<Procedimento | null>(null);
-
-  const handleAgendar = (procedimento: Procedimento) => {
-    setSelectedProcedimento(procedimento);
-    setModalOpen(true);
-  };
-
-  return (
-    <>
-      <section id="procedimentos" className="py-20 bg-[#FAF8F5]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#3A2E2A] mb-4">
-            Nossos Procedimentos
-          </h2>
-
-          <p className="text-center text-[#3A2E2A]/70 mb-12 text-lg">
-            Técnicas premium para realçar sua beleza natural
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {procedimentos.map((proc, index) => (
-              <div
-                key={`${proc.nome}-${index}`}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-[#C6A75E] hover:scale-105 transition-all duration-300"
-              >
-                <div className="h-64 overflow-hidden">
-                  <img
-                    src={proc.imagem}
-                    alt={proc.nome}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/placeholder.jpg';
-                    }}
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-[#3A2E2A] mb-2">
-                    {proc.nome}
-                  </h3>
-
-                  <p className="text-[#C6A75E] text-2xl font-bold mb-3">
-                    R$ {proc.preco}
-                  </p>
-
-                  <p className="text-[#3A2E2A]/70 mb-6">
-                    {proc.descricao}
-                  </p>
-
-                  <button
-                    onClick={() => handleAgendar(proc)}
-                    className="w-full bg-[#2E7D32] hover:bg-[#1B5E20] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Agendar
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Modal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        procedimento={selectedProcedimento}
-      />
-    </>
-  );
-}
