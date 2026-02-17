@@ -11,7 +11,7 @@ const procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Técnica sofisticada que cria um efeito de leque dramático e volumoso.',
-    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.06_(1).jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_12.14.07_(1).jpeg'
   },
   {
     nome: 'Volume Europeu',
