@@ -13,12 +13,12 @@ interface ModalProps {
 export default function Modal({ isOpen, onClose, procedimento }: ModalProps) {
   if (!isOpen || !procedimento) return null;
 
-  const handleAplicacao = () => {
+  const handleAplicação = () => {
     window.open('https://pag.ae/81vUL4Buv', '_blank');
     onClose();
   };
 
-  const handleManutencao = () => {
+  const handleManutenção = () => {
     window.open('https://pag.ae/81vUL4Buv', '_blank');
     onClose();
   };
@@ -52,7 +52,7 @@ export default function Modal({ isOpen, onClose, procedimento }: ModalProps) {
           </button>
 
           <button
-            onClick={handleManutencao}
+            onClick={handleManutenção}
             className="w-full bg-[#2E7D32] hover:bg-[#1B5E20] text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg text-left"
           >
             <div className="flex justify-between items-center">
