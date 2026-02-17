@@ -43,7 +43,7 @@ const Nossos procedimentos: Procedimento[] = [
     preco: 165,
     precoManutencao: 110,
     descricao: 'Aplicação rápida e prática, ideal para quem busca resultados imediatos.',
-    imagem: '/volume-express.jpeg'
+    imagem: '/WhatsApp_Image_2026-02-16_at_14.40.49 (1).jpeg'
   },
   {
     nome: 'Mega Volume',
